@@ -12,6 +12,7 @@ $msg = wordwrap($msg, 70);
 $success = mail("simonfroggatt76@gmail.com", "My subject", $msg);
 if (!$success) {
     $errorMessage = error_get_last()['message'];
+    echo $errorMessage;
 }
 else {
     echo 'success';
